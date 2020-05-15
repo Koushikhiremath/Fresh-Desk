@@ -1,0 +1,34 @@
+<div class="conatiner">
+    <div class="card mx-auto mt-5" style="width: 300px;">
+        <h5 class="card-header text-center">Create Ticket</h5>
+        <div class="card-body">
+            <form [formGroup]="createticketform" (ngSubmit)="oncreateticket()" >
+                <div class="form-group text-center">
+                  <label  for="ticketname">Ticket Name</label>
+                  <input type="text" class="form-control" formControlName="ticketname" required> 
+                </div>
+                <div class="form-group text-center">
+                <mat-form-field>
+                    <mat-label>Select Type of Ticket</mat-label>
+                    <mat-select formControlName="tickettype">
+                      <mat-option *ngFor="let type of types" [value]="type.value">
+                        {{type.viewValue}}
+                      </mat-option>
+                    </mat-select>
+                  </mat-form-field>
+                </div>
+                <div class="form-group text-center">
+                <mat-form-field appearance="fill">
+                    <mat-label>Ticket Discription</mat-label>
+                    <textarea formControlName="ticketdis" matInput></textarea>
+                  </mat-form-field>
+                </div>
+               
+                <div class="text-center">
+                <button type="submit" class="btn btn-primary" [disabled]="!createticketform.valid">Create</button>
+            </div>
+              </form>
+        </div>
+      </div>
+</div>
+

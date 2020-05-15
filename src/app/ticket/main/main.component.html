@@ -1,0 +1,12 @@
+
+<div *ngFor="let data of tickets" class="card text-center mt-3">
+    <div class="card-header">
+        {{data.ticketname}}
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Ticket Type {{data.tickettype}}</h5>
+      <p class="card-text">{{data.ticketdis}}</p>
+      <button type="button" class="btn btn-primary">Close Ticket</button>
+    </div>
+  </div>
+  
