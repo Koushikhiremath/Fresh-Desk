@@ -11,7 +11,7 @@ interface Ticket{
 })
 export class DeskService {
 
-  ticketarry:Ticket[]=[];
+ public ticketarry:Ticket[]=[];
 
 
 

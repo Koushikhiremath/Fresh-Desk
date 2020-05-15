@@ -42,7 +42,7 @@ export class CreateticketComponent implements OnInit {
   oncreateticket()
   {
     this.ticket.ticketarry.push(this.createticketform.value);
-    console.log(this.ticket);
+    console.log(this.ticket.ticketarry);
 
   }
 

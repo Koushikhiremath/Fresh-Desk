@@ -14,20 +14,22 @@ interface Ticket{
 })
 export class MainComponent implements OnInit {
 
-  tickets:Ticket[]=[{
-    ticketname:'Hello',
-    tickettype:'AWS',
-    ticketdis:'Hi'
+  tickets:Ticket[]=[];
 
+  constructor(private ticket:DeskService) {
 
-  }];
+    this.tickets=this.ticket.ticketarry;
 
-  constructor(private ticket:DeskService) { }
+   }
 
   ngOnInit(): void {
 
+  
+
     
   }
+
+  
 
 
 }
